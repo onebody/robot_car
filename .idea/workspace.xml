@@ -35,7 +35,7 @@
       <file leaf-file-name="robot_motor.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_motor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="0" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.70017636">
+            <state line="115" column="22" selection-start="0" selection-end="3009" vertical-scroll-proportion="0.4303351">
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -406,7 +406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_motor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.70017636">
+        <state line="115" column="22" selection-start="0" selection-end="3009" vertical-scroll-proportion="0.4303351">
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>
