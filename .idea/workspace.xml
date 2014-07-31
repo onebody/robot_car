@@ -20,15 +20,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="robot.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="robot.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="30" selection-start="865" selection-end="874" vertical-scroll-proportion="0.92945325">
+            <state line="60" column="0" selection-start="1785" selection-end="1838" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
-                <element signature="e#1662#3908#0" expanded="false" />
-                <element signature="e#3937#5108#0" expanded="false" />
+                <element signature="e#4083#6321#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_motor.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robot_motor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="0" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.70017636">
+              <folding>
+                <element signature="e#24#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_stepMotor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="38" selection-start="1289" selection-end="1324" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,6 +76,7 @@
         <option value="$PROJECT_DIR$/other/ultrasonic_2.py" />
         <option value="$PROJECT_DIR$/robot_stepMotor.py" />
         <option value="$PROJECT_DIR$/robot.py" />
+        <option value="$PROJECT_DIR$/robot_motor.py" />
       </list>
     </option>
   </component>
@@ -107,7 +127,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="robot" />
+              <option name="myItemId" value="robot_car" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -119,9 +139,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -232,7 +252,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22942074" sideWeight="0.996633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23323171" sideWeight="0.996633" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -300,13 +320,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="57" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/other/bujindianji.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="22" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" />
@@ -366,32 +379,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/other/ultrasonic_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="0" selection-start="1876" selection-end="2096" vertical-scroll-proportion="0.5202822">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="443" selection-end="443" vertical-scroll-proportion="0.029982364">
-          <folding />
-        </state>
+        <state line="84" column="0" selection-start="1876" selection-end="2096" vertical-scroll-proportion="0.5202822" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="50" selection-start="1052" selection-end="1058" vertical-scroll-proportion="0.70017636">
+        <state line="50" column="50" selection-start="1052" selection-end="1058" vertical-scroll-proportion="0.70017636" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="38" selection-start="1289" selection-end="1324" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="30" selection-start="865" selection-end="874" vertical-scroll-proportion="0.92945325">
+        <state line="60" column="0" selection-start="1785" selection-end="1838" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#24#35#0" expanded="true" />
-            <element signature="e#1662#3908#0" expanded="false" />
-            <element signature="e#3937#5108#0" expanded="false" />
+            <element signature="e#4083#6321#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_motor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.70017636">
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
