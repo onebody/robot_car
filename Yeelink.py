@@ -37,7 +37,7 @@ class Yeelink_util():
     def getValue(self, key):
         #发送请求
         self.apiheaders['U-ApiKey'] = self.APP_Key
-        self.apiurl= self.apiurl.replace('{deviceID}',self.deviceID).replace('{sensorID}',self.sensorID)
+        self.apiurl = self.apiurl.replace('{deviceID}', self.deviceID).replace('{sensorID}', self.sensorID)
         r = requests.get(self.apiurl, headers=self.apiheaders)
         # 打印响应内容
         print("ResponseContent:  %s" % r.text)

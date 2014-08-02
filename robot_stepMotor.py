@@ -24,7 +24,7 @@ class StepMotor():
 
     #    print  type
         if (type == 'BCM'):
-            print  " GPIO  BCM"
+            print(" GPIO  BCM")
             GPIO.setmode(GPIO.BCM)
             self.coil_A_1_pin = 17
             self.coil_A_2_pin = 18
@@ -32,7 +32,8 @@ class StepMotor():
             self.coil_B_1_pin = 27
             self.coil_B_2_pin = 22
         else:
-            print  " GPIO  BOARD"
+            print
+            " GPIO  BOARD"
             GPIO.setmode(GPIO.BOARD)
             self.coil_A_1_pin = 11
             self.coil_A_2_pin = 12
@@ -121,11 +122,11 @@ class StepMotor():
         self.initPin()
 
         while True:
-            delay = raw_input("Delay between steps (milliseconds)?")
-            steps = raw_input("How many steps forward? ")
+            delay = input("Delay between steps (milliseconds)?")
+            steps = input("How many steps forward? ")
             self.forward(int(delay) / 1000.0, int(steps))
 
-            steps = raw_input("How many steps backwards? ")
+            steps = input("How many steps backwards? ")
             self.backwards(int(delay) / 1000.0, int(steps))
 
 stepMotor = StepMotor()

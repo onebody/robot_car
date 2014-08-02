@@ -7,7 +7,7 @@ class Robot_Car():
     distanceType_Before = 'Before'
     distanceType_After = 'After'
 
-    delays = 2 #
+    delays = 0.5 #
     steps = 100 #
 
 
@@ -21,25 +21,25 @@ class Robot_Car():
                 # Before Distance
                 beforeDistance = rangingSensor.distance(self.distanceType_Before)
                 afterDistance = rangingSensor.distance(self.distanceType_After)
-                print "Before Distance : %.1f" % beforeDistance
-                print "After Distance : %.1f" % afterDistance
+                print("Before Distance : %.1f" % beforeDistance)
+                print("After Distance : %.1f" % afterDistance)
 
                 if(beforeDistance > 15 ):
                     # Walk forward
-                    print " Walk forward >>>>>"
+                    print(" Walk forward >>>>>")
                     motor.forward(self.delays)
                 elif(beforeDistance < 15 and afterDistance > 15 ):
                     # Back off
-                    print "Back off <<<<<"
+                    print("Back off <<<<<")
                     motor.backwards(self.delays)
                 elif(beforeDistance < 15 and afterDistance < 15 ):
                     if(beforeDistance > afterDistance):
                         # Forward left
-                        print "Forward left <<<<<"
+                        print("Forward left <<<<<")
                         motor.forward_Left(self.delays)
                     elif (beforeDistance <= afterDistance):
                         # Left rear back
-                        print "Left rear back"
+                        print("Left rear back")
                         motor.back_Left(self.delays)
 
                 time.sleep(2)

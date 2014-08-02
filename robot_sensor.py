@@ -48,7 +48,7 @@ def distance(measure='cm', GPIO_TRIGGER=0, GPIO_ECHO=0):
     gpio.cleanup()
     return distance
 
-print 'No1.distance: ' + str(distance('cm', 11, 12)) + ' cm'
+print ('No1.distance: ' + str(distance('cm', 11, 12)) + ' cm')
 
-print 'No2.distance: ' + str(distance('cm', 5, 8)) + ' cm'
+print ('No2.distance: ' + str(distance('cm', 5, 8)) + ' cm')
 

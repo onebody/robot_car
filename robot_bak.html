@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="height = device-height, width = 420, user-scalable = no"/>
+    <title>小车控制台</title>
+    <script type="text/javascript" src="/webiopi.js"></script>
+    <script type="text/javascript">
+        var IN1 = 22; //GPIO 3  IN1
+        var IN2 = 27; //GPIO 2  IN2
+        var IN3 = 17; //GPIO 0  IN3
+        var IN4 = 18; //GPIO 1  IN4
+
+        function sleep(numberMillis) {
+            var now = new Date();
+            var exitTime = now.getTime() + numberMillis;
+            while (true) {
+                now = new Date();
+                if (now.getTime() > exitTime)
+                    return;
+            }
+        }
+
+        function initPin12() {
+            webiopi().setFunction(IN2, "out");
+            webiopi().setFunction(IN1, "out");
+        }
+
+        function initPin34() {
+            webiopi().setFunction(IN4, "out");
+            webiopi().setFunction(IN3, "out");
+        }
+
+
+        function turn_Left(delay) {
+            initPin12();
+            webiopi().digitalWrite(IN2, 1);
+            webiopi().digitalWrite(IN1, 0);
+            sleep(delay);
+        }
+
+        function turn_Right(delay) {
+            initPin12();
+            webiopi().digitalWrite(IN2, 0);
+            webiopi().digitalWrite(IN1, 1);
+            sleep(delay);
+        }
+
+        function forward(delay) {
+            initPin34();
+            webiopi().digitalWrite(IN4, 0);
+            webiopi().digitalWrite(IN3, 1);
+            sleep(delay);
+        }
+
+        function backwards(delay) {
+            initPin34();
+            webiopi().digitalWrite(IN4, 1);
+            webiopi().digitalWrite(IN3, 0);
+            sleep(delay);
+        }
+
+        function forward_Left(delay) {
+            initPin12();
+            initPin34();
+            webiopi().digitalWrite(IN2, 1);
+            webiopi().digitalWrite(IN1, 0);
+
+            webiopi().digitalWrite(IN4, 0);
+            webiopi().digitalWrite(IN3, 1);
+            sleep(delay);
+        }
+
+        function forward_Right(delay) {
+            initPin12();
+            initPin34();
+
+            webiopi().digitalWrite(IN2, 0);
+            webiopi().digitalWrite(IN1, 1);
+
+            webiopi().digitalWrite(IN4, 0);
+            webiopi().digitalWrite(IN3, 1);
+            sleep(delay);
+        }
+        function back_Left(delay) {
+            initPin12();
+            initPin34();
+            webiopi().digitalWrite(IN2, 1);
+            webiopi().digitalWrite(IN1, 0);
+
+            webiopi().digitalWrite(IN4, 1);
+            webiopi().digitalWrite(IN3, 0);
+            sleep(delay);
+        }
+
+        function back_Right(delay) {
+            initPin12();
+            initPin34();
+            webiopi().digitalWrite(IN2, 0);
+            webiopi().digitalWrite(IN1, 1);
+
+            webiopi().digitalWrite(IN4, 1);
+            webiopi().digitalWrite(IN3, 0);
+            sleep(delay);
+        }
+        function stop() {
+            webiopi().setFunction(IN1, "in");
+            webiopi().setFunction(IN2, "in");
+
+            webiopi().setFunction(IN3, "in");
+            webiopi().setFunction(IN4, "in");
+        }
+
+        webiopi().ready(function () {
+            var content, button;
+            var delay = 500;
+            content = $("#content");
+
+//            button = webiopi().createButton("hold", "LED1", mousedown, mouseup);
+//            content.append(button);
+
+
+            // 创建一个不同按钮，按钮ID为hold，名称为LED1，并绑定按下和松开事件
+            button = webiopi().createButton("stop", "stop",
+                    function () {
+                    },
+                    function () {
+                        stop();
+                    });
+            content.append(button);
+
+            button = webiopi().createButton("forward", "forward",
+                    function () {
+                    },
+                    function () {
+                        forward(delay);
+                    });
+            content.append(button);
+
+            button = webiopi().createButton("backwards", "backwards",
+                    function () {
+                    },
+                    function () {
+                        backwards(delay);
+                    });
+            content.append(button);
+
+            button = webiopi().createButton("forward_Left", "forward_Left",
+                    function () {
+                    },
+                    function () {
+                        forward_Left(delay);
+                    });
+            content.append(button);
+
+            button = webiopi().createButton("back_Right", "back_Right",
+                    function () {
+                    },
+                    function () {
+                        back_Right(delay);
+                    });
+            content.append(button);
+//
+//            // 创建一个GPIO按钮，编号为GPIO24，按钮名称为LED2
+//            button = webiopi().createGPIOButton(25, "LED2");
+//            content.append(button); // append button to content div
+
+            // 不自动刷新界面
+            webiopi().refreshGPIO(false);
+        });
+    </script>
+    <style type="text/css">
+        button {
+            display: block;
+            margin: 5px 5px 5px 5px;
+            width: 160px;
+            height: 45px;
+            font-size: 24pt;
+            font-weight: bold;
+            color: black;
+        }
+
+        .LOW {
+            background-color: White;
+        }
+
+        .HIGH {
+            background-color: Red;
+        }
+    </style>
+</head>
+<body>
+<div id="content" align="center"></div>
+</body>
+</html>

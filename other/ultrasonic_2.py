@@ -68,7 +68,7 @@ GPIO_ECHO = 12
 
 GPIO.setwarnings(False)
 
-print "Ultrasonic Measurement"
+print("Ultrasonic Measurement")
 
 # Set pins as output and input
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)  # Trigger
@@ -85,7 +85,7 @@ GPIO.output(GPIO_TRIGGER, False)
 try:
     while True:
         distance = measure_average()
-        print "Distance : %.1f" % distance
+        print("Distance : %.1f" % distance)
         time.sleep(1)
 
 except KeyboardInterrupt:

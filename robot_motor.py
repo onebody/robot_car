@@ -102,40 +102,40 @@ class Motor():
         GPIO.cleanup()
 
 
-delay = 2
+delay = 0.5
 
 motor = Motor()
-print "turn left >>>>\n"
+print ("turn left >>>>\n")
 motor.turn_Left(delay)
 
 time.sleep(delay)
 
-print "turn right >>>>\n"
+print ("turn right >>>>\n")
 motor.turn_Right(delay)
 
-print "forward >>>>\n"
+print ("forward >>>>\n")
 motor.forward(delay)
 
 time.sleep(delay)
 
-print "back wards >>>>\n"
+print ("back wards >>>>\n")
 motor.backwards(delay)
 
 time.sleep(delay)
 
-print "forward left >>>>\n"
+print ("forward left >>>>\n")
 motor.forward_Left(delay)
 
 time.sleep(delay)
 
-print "forward right >>>>\n"
+print ("forward right >>>>\n")
 motor.forward_Right(delay)
 
 time.sleep(delay)
-print "back left >>>>\n"
+print ("back left >>>>\n")
 motor.back_Left(delay)
 
 time.sleep(delay)
 
-print "back right >>>>\n"
+print ("back right >>>>\n")
 motor.back_Right(delay)
