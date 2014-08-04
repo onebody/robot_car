@@ -20,37 +20,50 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="robot.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robot.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="7" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.74025977">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robot_bak.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_bak.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="550" selection-end="550" vertical-scroll-proportion="-7.464286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="robot_webiopi.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_webiopi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="webiopi.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webiopi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="394" column="36" selection-start="12160" selection-end="12160" vertical-scroll-proportion="0.0">
+            <state line="395" column="40" selection-start="12192" selection-end="12192" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webiopi_macro_script.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="25" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#103#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StepMotor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webiopi_api/StepMotor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="39" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#34#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="66" selection-start="762" selection-end="762" vertical-scroll-proportion="0.46580407">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robot_1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robot_1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="167" column="94" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,22 +79,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/ultrasonic_2.py" />
-        <option value="$PROJECT_DIR$/sensor.py" />
-        <option value="$PROJECT_DIR$/robot_motor.py" />
-        <option value="$PROJECT_DIR$/robot_sensor.py" />
-        <option value="$PROJECT_DIR$/robot_stepMotor.py" />
-        <option value="$PROJECT_DIR$/Yeelink.py" />
-        <option value="$PROJECT_DIR$/other/bujindianji.py" />
         <option value="$PROJECT_DIR$/other/robot_bjdj_bakward.py" />
         <option value="$PROJECT_DIR$/other/robot_bjdj_forward.py" />
         <option value="$PROJECT_DIR$/other/robot_stepMotor_bak.py" />
         <option value="$PROJECT_DIR$/other/ultrasonic_2.py" />
         <option value="$PROJECT_DIR$/roboy.py" />
-        <option value="$PROJECT_DIR$/robot.html" />
         <option value="$PROJECT_DIR$/robot.py" />
+        <option value="$PROJECT_DIR$/webiopi-client.py" />
+        <option value="$PROJECT_DIR$/robot_webiopi_client.py" />
+        <option value="$PROJECT_DIR$/webiopi/clients/__init__.py" />
+        <option value="$PROJECT_DIR$/RangingSensor.py" />
         <option value="$PROJECT_DIR$/robot_webiopi.py" />
+        <option value="$PROJECT_DIR$/robot_1.html" />
+        <option value="$PROJECT_DIR$/webiopi_api/__init__.py" />
+        <option value="$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py" />
+        <option value="$PROJECT_DIR$/webiopi_api/StepMotor.py" />
+        <option value="$PROJECT_DIR$/robot.html" />
       </list>
     </option>
   </component>
@@ -143,12 +156,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -167,10 +181,11 @@
       <recent name="H:\python_workspace\robot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\python_workspace\robot_car\webiopi_api" />
       <recent name="H:\python_workspace\robot\other" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.LED">
     <configuration default="false" name="LED" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,7 +203,66 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="robot" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="robot" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="robot" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.LED" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.LED" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
@@ -219,12 +293,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23652695" sideWeight="0.996633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24009146" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -232,9 +308,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -272,7 +346,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -293,87 +367,116 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/other/robot_bjdj_bakward.py">
+    <entry file="file://D:/Python34/Lib/wsgiref/validate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="26" selection-start="2047" selection-end="2047" vertical-scroll-proportion="3.3376148" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/bujindianji.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="279" selection-end="279" vertical-scroll-proportion="-0.978836" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="966" selection-end="966" vertical-scroll-proportion="1.319224" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="38" selection-start="2569" selection-end="2569" vertical-scroll-proportion="0.28042328" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.23985891" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Yeelink.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="758" selection-end="758" vertical-scroll-proportion="0.95943564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/ultrasonic_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="413" selection-end="413" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/robot_stepMotor_bak.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="445" selection-end="445" vertical-scroll-proportion="0.77954143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_motor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="35" selection-start="1167" selection-end="1167" vertical-scroll-proportion="1.5044248" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="595" selection-end="595" vertical-scroll-proportion="0.5696649" />
+        <state line="193" column="13" selection-start="5975" selection-end="5975" vertical-scroll-proportion="0.3321918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="0" selection-start="7568" selection-end="7568" vertical-scroll-proportion="0.9329806">
+        <state line="15" column="36" selection-start="258" selection-end="258" vertical-scroll-proportion="0.42713568" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi-client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="27" selection-start="662" selection-end="662" vertical-scroll-proportion="0.5443886" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="94" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webiopi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="394" column="36" selection-start="12160" selection-end="12160" vertical-scroll-proportion="0.0">
+        <state line="395" column="40" selection-start="12192" selection-end="12192" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_bak.html">
+    <entry file="file://D:/Python34/Lib/http/cookies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="550" selection-end="550" vertical-scroll-proportion="-7.464286">
+        <state line="494" column="32" selection-start="17959" selection-end="17959" vertical-scroll-proportion="0.5272206">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_webiopi.py">
+    <entry file="file://$PROJECT_DIR$/webiopi/devices/digital/gpio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+        <state line="27" column="22" selection-start="932" selection-end="932" vertical-scroll-proportion="0.21693122">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi/devices/digital/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="799" selection-end="799" vertical-scroll-proportion="-1.0740073">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_stepMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="59" selection-start="205" selection-end="3128" vertical-scroll-proportion="0.6880734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="40" selection-start="824" selection-end="824" vertical-scroll-proportion="0.40550458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi_api/RangingSensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="94" selection-end="116" vertical-scroll-proportion="0.26984128">
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi_api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="43" selection-start="114" selection-end="114" vertical-scroll-proportion="0.059964728">
+          <folding>
+            <element signature="e#19#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm20/system/python_stubs/814085081/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="7" selection-start="5247" selection-end="5247" vertical-scroll-proportion="0.5132275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="25" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#103#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi_api/StepMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="39" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#34#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="7" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.74025977">
+        <state line="17" column="66" selection-start="762" selection-end="762" vertical-scroll-proportion="0.46580407">
           <folding />
         </state>
       </provider>

@@ -160,6 +160,18 @@
                         back_Right(delay);
                     });
             content.append(button);
+
+            button = webiopi().createButton("rangingSensor", "测距",
+                    function () {
+                    },
+                    function () {
+                        webiopi().callMacro("rangingSensor_Distance", [23, 24], function (m, s, ress) {
+                            alert(ress);
+                        });
+                    });
+            content.append(button);
+
+
 //
 //            // 创建一个GPIO按钮，编号为GPIO24，按钮名称为LED2
 //            button = webiopi().createGPIOButton(25, "LED2");

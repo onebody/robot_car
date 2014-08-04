@@ -23,6 +23,20 @@
 
             button = webiopi().createButton("bt_down", "\\/", go_backward, stop);
             $("#down").append(button);
+
+            button = webiopi().createButton("bt_webCam_left", "左", webCam_left);
+            $("#webCam_left").append(button);
+
+            button = webiopi().createButton("bt_webCam_right", "右", webCam_right);
+            $("#webCam_right").append(button);
+        }
+
+        function webCam_left() {
+            webiopi().callMacro("webcamStepMotor_turnWebcam", "45,0,0.01");
+        }
+
+        function webCam_right() {
+            webiopi().callMacro("webcamStepMotor_turnWebcam", "45,1,0.01");
         }
 
         function go_forward() {
@@ -61,11 +75,14 @@
 </head>
 <body>
 <div id="content" align="center">
-    <img width="320" height="240" src="http://192.168.1.103:8001/?action=stream"><br/>
+    <img width="320" height="240" src="http://192.168.1.103:8081/?action=stream"><br/>
 
     <div id="up"></div>
     <div id="middle"></div>
     <div id="down"></div>
+
+    <div id="webCam_left"></div>
+    <div id="webCam_right"></div>
 </div>
 </body>
 </html>
