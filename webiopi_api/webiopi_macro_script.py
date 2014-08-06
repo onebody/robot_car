@@ -57,7 +57,7 @@ class RangingSensor():
 
 
 class StepMotor():
-    ports = [8, 11, 25, 2]
+    ports = [8, 11, 25, 7]
 
     def turnWebcam(self, steps_str, clockwise_str, delay):
         steps = int(steps_str)
@@ -95,63 +95,119 @@ class StepMotor():
         for p in self.ports:
             GPIO.setFunction(p, GPIO.IN)
 
-# -------------------------------------------------- #
-# Constants definition                               #
-# -------------------------------------------------- #
 
-# Left motor GPIOs
-L1 = 22 # H-Bridge 1
-L2 = 27 # H-Bridge 2
-LS = 7 # H-Bridge 1,2EN
+class RobotMotor():
+    # Front motor GPIOs
+    L1 = 22 # H-Bridge 1
+    L2 = 27 # H-Bridge 2
+    LS = 7 # H-Bridge 1,2EN
 
-# Right motor GPIOs
-R1 = 17 # H-Bridge 3
-R2 = 18 # H-Bridge 4
-RS = 9 # H-Bridge 3,4EN
+    # Back motor GPIOs
+    R1 = 17 # H-Bridge 3
+    R2 = 18 # H-Bridge 4
+    RS = 9 # H-Bridge 3,4EN
 
-# -------------------------------------------------- #
-# Convenient PWM Function                            #
-# -------------------------------------------------- #
+    # -------------------------------------------------- #
+    # Convenient PWM Function                            #
+    # -------------------------------------------------- #
 
-# Set the speed of two motors
-def set_speed(speed):
-    GPIO.pulseRatio(LS, speed)
-    GPIO.pulseRatio(RS, speed)
-
-# -------------------------------------------------- #
-# Left Motor Functions                               #
-# -------------------------------------------------- #
-
-def left_stop():
-    GPIO.output(L1, GPIO.LOW)
-    GPIO.output(L2, GPIO.LOW)
+    # Set the speed of two motors
+    def set_speed(self, speed):
+        GPIO.pulseRatio(self.LS, speed)
+        GPIO.pulseRatio(self.RS, speed)
 
 
-def left_forward():
-    GPIO.output(L1, GPIO.HIGH)
-    GPIO.output(L2, GPIO.LOW)
+    # -------------------------------------------------- #
+    # Left Motor Functions                               #
+    # -------------------------------------------------- #
+
+    def left(self):
+        GPIO.output(self.L1, GPIO.LOW)
+        GPIO.output(self.L2, GPIO.HIGH)
+
+    def right(self):
+        GPIO.output(self.L1, GPIO.HIGH)
+        GPIO.output(self.L2, GPIO.LOW)
+
+    def stop(self):
+        GPIO.output(self.L1, GPIO.LOW)
+        GPIO.output(self.L2, GPIO.LOW)
+        GPIO.output(self.R1, GPIO.LOW)
+        GPIO.output(self.R2, GPIO.LOW)
+
+    def forward(self):
+        GPIO.output(self.R1, GPIO.HIGH)
+        GPIO.output(self.R2, GPIO.LOW)
+
+    def backward(self):
+        GPIO.output(self.R1, GPIO.LOW)
+        GPIO.output(self.R2, GPIO.HIGH)
+
+    def init(self, L1, L2, LS, R1, R2, RS):
+        # Setup GPIOs
+        self.L1 = L1
+        self.L2 = L2
+        self.LS = LS
+        self.R1 = R1
+        self.R2 = R2
+        self.RS = RS
+
+        #    GPIO.setFunction(self.LS, GPIO.PWM)
+        GPIO.setFunction(self.L1, GPIO.OUT)
+        GPIO.setFunction(self.L2, GPIO.OUT)
+
+        #    GPIO.setFunction(self.RS, GPIO.PWM)
+        GPIO.setFunction(self.R1, GPIO.OUT)
+        GPIO.setFunction(self.R2, GPIO.OUT)
 
 
-def left_backward():
-    GPIO.output(L1, GPIO.LOW)
-    GPIO.output(L2, GPIO.HIGH)
+class Robot_Car():
+    distanceType_Before = 'Before'
+    distanceType_After = 'After'
 
-# -------------------------------------------------- #
-# Right Motor Functions                              #
-# -------------------------------------------------- #
-def right_stop():
-    GPIO.output(R1, GPIO.LOW)
-    GPIO.output(R2, GPIO.LOW)
+    isAuto = True
 
+    delays = 0.5 #
+    steps = 100 #
 
-def right_forward():
-    GPIO.output(R1, GPIO.HIGH)
-    GPIO.output(R2, GPIO.LOW)
+    def stop(self):
+        self.isAuto = False
 
+    def start(self):
+        rangingSensor = RangingSensor()
 
-def right_backward():
-    GPIO.output(R1, GPIO.LOW)
-    GPIO.output(R2, GPIO.HIGH)
+        motor = RobotMotor()
+
+        while True:
+            if(self.isAuto == True):
+                # Before Distance
+                beforeDistance = rangingSensor.measure(23, 24)
+                afterDistance = rangingSensor.measure(3, 4)
+                print("Before Distance : %.1f" % beforeDistance)
+                print("After Distance : %.1f" % afterDistance)
+
+                if(beforeDistance > 15 ):
+                    # Walk forward
+                    print(" Walk forward >>>>>")
+                    motor.forward()
+                elif(beforeDistance < 15 and afterDistance > 15 ):
+                    # Back off
+                    print("Back off <<<<<")
+                    motor.backward()
+                elif(beforeDistance < 15 and afterDistance < 15 ):
+                    if(beforeDistance > afterDistance):
+                        # Forward left
+                        print("Forward left <<<<<")
+                        motor.left()
+                        motor.forward()
+                    elif (beforeDistance <= afterDistance):
+                        # Left rear back
+                        print("Left rear back")
+                        motor.left()
+                        motor.backward()
+
+                time.sleep(2)
+
 
 # -------------------------------------------------- #
 # Macro definition part                              #
@@ -174,51 +230,33 @@ def webcamStepMotor_turnWebcam( steps_str, clockwise_str, delay):
 def webcamStepMotor_setup( in1, in2, in3, in4):
     return webcamStepMotor.setup(in1, in2, in3, in4)
 
+robotMotor = RobotMotor()
+
+robotCar = Robot_Car()
 
 @webiopi.macro
-def go_forward():
-    init()
-    left_forward()
-    right_forward()
-
-
-@webiopi.macro
-def go_backward():
-    init()
-    left_backward()
-    right_backward()
+def robotMotor_setup(L1, L2, LS, R1, R2, RS):
+    robotMotor.init(int(L1), int(L2), int(LS), int(R1), int(R2), int(RS))
 
 
 @webiopi.macro
-def turn_left():
-    init()
-    left_backward()
-    right_forward()
+def robotMotor_control(action):
+    robotCar.stop()
+    if(action == 'forward'):
+        robotMotor.forward()
+    elif (action == 'backward'):
+        robotMotor.backward()
+    elif(action == 'turn_left_forward'):
+        robotMotor.left()
+        robotMotor.forward()
+    elif(action == 'turn_right_forward'):
+        robotMotor.right()
+        robotMotor.forward()
+    elif(action == 'stop'):
+        robotMotor.stop()
+    elif(action == 'auto'):
+        robotCar.start()
 
-
-@webiopi.macro
-def turn_right():
-    init()
-    left_forward()
-    right_backward()
-
-
-@webiopi.macro
-def stop():
-    init()
-    left_stop()
-    right_stop()
-
-
-def init():
-# Setup GPIOs
-#    GPIO.setFunction(LS, GPIO.PWM)
-    GPIO.setFunction(L1, GPIO.OUT)
-    GPIO.setFunction(L2, GPIO.OUT)
-
-    #    GPIO.setFunction(RS, GPIO.PWM)
-    GPIO.setFunction(R1, GPIO.OUT)
-    GPIO.setFunction(R2, GPIO.OUT)
 
 # Called by WebIOPi at script loading
 def setup():
@@ -231,14 +269,8 @@ def setup():
 
 # Called by WebIOPi at server shutdown
 def destroy():
-# Reset GPIO functions
-#    GPIO.setFunction(LS, GPIO.IN)
-    GPIO.setFunction(L1, GPIO.IN)
-    GPIO.setFunction(L2, GPIO.IN)
-
-    #    GPIO.setFunction(RS, GPIO.IN)
-    GPIO.setFunction(R1, GPIO.IN)
-    GPIO.setFunction(R2, GPIO.IN)
+    # Reset GPIO functions
+    robotMotor.stop()
 
     webcamStepMotor.destroy()
 

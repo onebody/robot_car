@@ -15,7 +15,7 @@
             button = webiopi().createButton("bt_left", "<", turn_left, stop);
             $("#middle").append(button);
 
-            button = webiopi().createButton("bt_stop", "X", stop);
+            button = webiopi().createButton("bt_stop", "Auto", auto);
             $("#middle").append(button);
 
             button = webiopi().createButton("bt_right", ">", turn_right, stop);
@@ -29,37 +29,86 @@
 
             button = webiopi().createButton("bt_webCam_right", "右", webCam_right);
             $("#webCam_right").append(button);
-        }
 
+            setInterval("showTime()", 2000);
+
+
+
+        }
+        var camFlag = false;
         function webCam_left() {
-            webiopi().callMacro("webcamStepMotor_turnWebcam", "45,0,0.01");
+            if(camFlag ==false){
+                webiopi().callMacro("webcamStepMotor_setup", "8,11,25,7,0.01,20");
+                camFlag = true;
+            }
+            webiopi().callMacro("webcamStepMotor_turnWebcam", "20,0,0.01");
         }
 
         function webCam_right() {
-            webiopi().callMacro("webcamStepMotor_turnWebcam", "45,1,0.01");
+            if(camFlag ==false){
+                webiopi().callMacro("webcamStepMotor_setup", "8,11,25,7,0.01,20");
+                camFlag = true;
+            }
+            webiopi().callMacro("webcamStepMotor_turnWebcam", "20,1,0.01");
         }
 
+
+        var init_flag = false;
+
+        function init_robotMotor() {
+            if (init_flag == false) {
+                webiopi().callMacro("robotMotor_setup", "22,27,7,17,18,9");
+                init_flag = true;
+            }
+        }
         function go_forward() {
-            webiopi().callMacro("go_forward");
+            init_robotMotor();
+            webiopi().callMacro("robotMotor_control", "forward");
         }
 
         function go_backward() {
-            webiopi().callMacro("go_backward");
+            init_robotMotor();
+            webiopi().callMacro("robotMotor_control", "backward");
         }
 
         function turn_right() {
-            webiopi().callMacro("turn_right");
+            init_robotMotor();
+            webiopi().callMacro("robotMotor_control", "turn_right_forward");
         }
 
         function turn_left() {
-            webiopi().callMacro("turn_left");
+            init_robotMotor();
+            webiopi().callMacro("robotMotor_control", "turn_left_forward");
         }
 
         function stop() {
-            webiopi().callMacro("stop");
+            webiopi().callMacro("robotMotor_control", "stop");
+        }
+
+        function auto() {
+            webiopi().callMacro("robotMotor_control", "auto");
         }
 
         webiopi().ready(init);
+        // 不自动刷新界面
+        webiopi().refreshGPIO(false);
+
+        var beforeDistance = "";
+        var afterDistance = "";
+        function showTime() {
+            var today = new Date();
+            webiopi().callMacro("rangingSensor_Distance", "23,24", function (s, a, d) {
+                beforeDistance = d;
+            });
+            webiopi().callMacro("rangingSensor_Distance", "3,4", function (s, a, d) {
+                afterDistance = d;
+            });
+            var html = "当前时间: " + today.toString() + "</br>";
+            html += "前方距离:" + beforeDistance + " CM</br>";
+            html += "后方距离:" + afterDistance + " CM";
+            document.getElementById("tip").innerHTML = html;
+        }
+
 
     </script>
     <style type="text/css">
@@ -75,7 +124,9 @@
 </head>
 <body>
 <div id="content" align="center">
-    <img width="320" height="240" src="http://192.168.1.103:8081/?action=stream"><br/>
+    <div id="tip">哈</div>
+
+    <img width="320" height="240" src="http://192.168.1.101:8081/?action=stream"><br/>
 
     <div id="up"></div>
     <div id="middle"></div>

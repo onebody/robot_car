@@ -8,7 +8,7 @@ import time
 GPIO = webiopi.GPIO
 
 class StepMotor():
-    ports = [8, 11, 25, 2]
+    ports = [8, 11, 25, 7]
 
     def turnWebcam(self, steps_str, clockwise_str, delay):
         steps = int(steps_str)
