@@ -25,19 +25,18 @@
             $("#down").append(button);
 
             button = webiopi().createButton("bt_webCam_left", "左", webCam_left);
-            $("#webCam_left").append(button);
+            $("#webCam").append(button);
 
             button = webiopi().createButton("bt_webCam_right", "右", webCam_right);
-            $("#webCam_right").append(button);
+            $("#webCam").append(button);
 
-            setInterval("showTime()", 2000);
-
+            setInterval("showTime()", 1000);
 
 
         }
-        var camFlag = false;
+        var camFlag = true;
         function webCam_left() {
-            if(camFlag ==false){
+            if (camFlag == false) {
                 webiopi().callMacro("webcamStepMotor_setup", "8,11,25,7,0.01,20");
                 camFlag = true;
             }
@@ -45,7 +44,7 @@
         }
 
         function webCam_right() {
-            if(camFlag ==false){
+            if (camFlag == false) {
                 webiopi().callMacro("webcamStepMotor_setup", "8,11,25,7,0.01,20");
                 camFlag = true;
             }
@@ -85,8 +84,18 @@
             webiopi().callMacro("robotMotor_control", "stop");
         }
 
+        var autoStart = false;
+
         function auto() {
-            webiopi().callMacro("robotMotor_control", "auto");
+            init_robotMotor();
+            if (autoStart == false) {
+                webiopi().callMacro("robotMotor_control", "auto");
+                autoStart = true;
+            }
+            else {
+                webiopi().callMacro("robotMotor_control", "auto_stop");
+                autoStart = false;
+            }
         }
 
         webiopi().ready(init);
@@ -107,6 +116,9 @@
             html += "前方距离:" + beforeDistance + " CM</br>";
             html += "后方距离:" + afterDistance + " CM";
             document.getElementById("tip").innerHTML = html;
+
+            if (beforeDistance < 30 || afterDistance < 30)
+                stop();
         }
 
 
@@ -126,14 +138,13 @@
 <div id="content" align="center">
     <div id="tip">哈</div>
 
-    <img width="320" height="240" src="http://192.168.1.101:8081/?action=stream"><br/>
+    <img width="320" height="240" src="http://192.168.1.102:8081/?action=stream"><br/>
 
     <div id="up"></div>
     <div id="middle"></div>
     <div id="down"></div>
 
-    <div id="webCam_left"></div>
-    <div id="webCam_right"></div>
+    <div id="webCam"></div>
 </div>
 </body>
 </html>

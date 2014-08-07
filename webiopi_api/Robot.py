@@ -4,7 +4,6 @@
 # Imports
 import webiopi
 import time
-import threading
 
 # Retrieve GPIO lib
 GPIO = webiopi.GPIO
@@ -160,120 +159,57 @@ class RobotMotor():
         GPIO.setFunction(self.R2, GPIO.OUT)
 
 
-class Robot_Car(threading.Thread):
+class Robot_Car():
     distanceType_Before = 'Before'
     distanceType_After = 'After'
-
-    rangingSensor = RangingSensor()
-
-    motor = RobotMotor()
 
     isAuto = True
 
     delays = 0.5 #
     steps = 100 #
 
-    def __init__(self):
-        threading.Thread.__init__(self)
-
     def stop(self):
         self.isAuto = False
-        self.motor.stop()
 
-    def run(self):
-        while not self.isAuto:
-            # Before Distance
-            beforeDistance = self.rangingSensor.measure(23, 24)
-            afterDistance = self.rangingSensor.measure(3, 4)
-            print("Before Distance : %.1f" % beforeDistance)
-            print("After Distance : %.1f" % afterDistance)
-            if(beforeDistance > 15 ):
-                # Walk forward
-                print(" Walk forward >>>>>")
-                self.motor.forward()
-            elif(beforeDistance < 15 and afterDistance > 15 ):
-                # Back off
-                print("Back off <<<<<")
-                self.motor.backward()
-            elif(beforeDistance < 15 and afterDistance < 15 ):
-                if(beforeDistance > afterDistance):
-                    # Forward left
-                    print("Forward left <<<<<")
-                    self.motor.left()
-                    self.motor.forward()
-                elif (beforeDistance <= afterDistance):
-                    # Left rear back
-                    print("Left rear back")
-                    self.motor.right()
-                    self.motor.backward()
-            time.sleep(2)
+    def start(self):
+        try:
+            rangingSensor = RangingSensor()
 
-# ------    ------------------------------------- #
-# Macro     ion part                              #
-# -------------------------------------------------- #
-rangingSensor = RangingSensor()
+            motor = RobotMotor()
 
-@webiopi.macro
-def rangingSensor_Distance(GPIO_TRIGGER, GPIO_ECHO):
-    return rangingSensor.measure(int(GPIO_TRIGGER), int(GPIO_ECHO))
+            while True:
+                if(self.isAuto == True):
+                    # Before Distance
+                    beforeDistance = rangingSensor.measure(23, 24)
+                    afterDistance = rangingSensor.measure(3, 4)
+                    print("Before Distance : %.1f" % beforeDistance)
+                    print("After Distance : %.1f" % afterDistance)
 
+                    if(beforeDistance > 15 ):
+                        # Walk forward
+                        print(" Walk forward >>>>>")
+                        motor.forward()
+                    elif(beforeDistance < 15 and afterDistance > 15 ):
+                        # Back off
+                        print("Back off <<<<<")
+                        motor.backward()
+                    elif(beforeDistance < 15 and afterDistance < 15 ):
+                        if(beforeDistance > afterDistance):
+                            # Forward left
+                            print("Forward left <<<<<")
+                            motor.left()
+                            motor.forward()
+                        elif (beforeDistance <= afterDistance):
+                            # Left rear back
+                            print("Left rear back")
+                            motor.left()
+                            motor.backward()
 
-webcamStepMotor = StepMotor()
+                    time.sleep(2)
+        except KeyboardInterrupt:
+            motor.stop()
 
-@webiopi.macro
-def webcamStepMotor_turnWebcam( steps_str, clockwise_str, delay):
-    return webcamStepMotor.turnWebcam(steps_str, clockwise_str, delay)
-
-
-@webiopi.macro
-def webcamStepMotor_setup( in1, in2, in3, in4):
-    return webcamStepMotor.setup(in1, in2, in3, in4)
-
-robotMotor = RobotMotor()
 
 robotCar = Robot_Car()
-Thread = Robot_Car()
 
-
-@webiopi.macro
-def robotMotor_setup(L1, L2, LS, R1, R2, RS):
-    robotMotor.init(int(L1), int(L2), int(LS), int(R1), int(R2), int(RS))
-
-@webiopi.macro
-def robotMotor_control(action):
-    robotCar.stop()
-    if(action == 'forward'):
-        robotMotor.forward()
-    elif (action == 'backward'):
-        robotMotor.backward()
-    elif(action == 'turn_left_forward'):
-        robotMotor.left()
-        robotMotor.forward()
-    elif(action == 'turn_right_forward'):
-        robotMotor.right()
-        robotMotor.forward()
-    elif(action == 'stop'):
-        robotMotor.stop()
-    elif(action == 'auto'):
-        Thread.start()
-    elif(action == 'auto_stop'):
-        Thread._stop()
-
-
-# Called by WebIOPi at script loading
-def setup():
-    print("")
-    # init()
-
-    #    set_speed(0.5)
-    # stop()
-
-
-# Called by WebIOPi at server shutdown
-def destroy():
-    # Reset GPIO functions
-    robotMotor.stop()
-
-    webcamStepMotor.destroy()
-
-
+robotCar.start()
