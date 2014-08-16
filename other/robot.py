@@ -161,12 +161,12 @@ class StepMotor():
 
 
     def setup(self):
-        GPIO.setmode(GPIO.BOARD)
-        self.coil_A_1_pin = 22 # GPIO 6
-        self.coil_A_2_pin = 7 # GPIO 7
+        GPIO.setmode(GPIO.BCM)
+        self.coil_A_1_pin = 8 # CE0
+        self.coil_A_2_pin = 11 # SCLK
 
-        self.coil_B_1_pin = 3 # SDA
-        self.coil_B_2_pin = 10 # RXD
+        self.coil_B_1_pin = 25 # GPIO 6
+        self.coil_B_2_pin = 7 #  CE1
 
 
     def initPin(self):
@@ -183,7 +183,7 @@ class StepMotor():
         GPIO.output(self.coil_B_2_pin, False)
 
 
-    def backwards(self, delays, steps):
+    def right(self, delays, steps):
         delay = delays / 1000.0
 
         for i in range(0, steps):
@@ -212,7 +212,7 @@ class StepMotor():
             time.sleep(delay)
 
 
-    def forward(self, delays, steps):
+    def left(self, delays, steps):
         delay = delays / 1000.0
 
         for i in range(0, steps):
@@ -253,7 +253,7 @@ class RangingSensor():
     GPIO.setwarnings(False)
 
     def measure(self, GPIO_TRIGGER=0, GPIO_ECHO=0):
-        GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
         GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
         GPIO.setup(GPIO_ECHO, GPIO.IN)
 
@@ -285,11 +285,11 @@ class RangingSensor():
         GPIO_ECHO = 0
 
         if(type == 'Before'):
-            GPIO_TRIGGER = 16 # GPIO 4
-            GPIO_ECHO = 18 # GPIO 5
+            GPIO_TRIGGER = 23 # GPIO 4
+            GPIO_ECHO = 24 # GPIO 5
         elif(type == 'After'):
-            GPIO_TRIGGER = 5 # SCL
-            GPIO_ECHO = 8 # TXD
+            GPIO_TRIGGER = 1 # SCL
+            GPIO_ECHO = 4 # GPIO7
         else:
             return 0
 
