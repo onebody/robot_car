@@ -19,6 +19,6 @@
   <component name="ProjectResources">
     <default-html-doctype>jar:file:\D:\soft\dev\JetBrains\PyCharm 2.6.3\lib\pycharm.jar!\resources\html5-schema\html5.rnc</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.4.1 (D:/Python34/python.exe)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.8 (D:/Python27/python.exe)" project-jdk-type="Python SDK" />
 </project>
 

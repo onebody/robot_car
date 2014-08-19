@@ -53,6 +53,7 @@ class RangingSensor():
         else:
             return self.measure(GPIO_TRIGGER, GPIO_ECHO)
 
+
 #
 #rangingSensor = RangingSensor()
 #beforeDistance = rangingSensor.measure(16, 18)

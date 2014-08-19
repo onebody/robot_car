@@ -6,7 +6,6 @@
 import time
 from RobotMotor import RobotMotor
 from RangingSensor import RangingSensor
-from StepMotor import StepMotor
 import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
@@ -67,7 +66,7 @@ class Robot_Car():
 
                     time.sleep(2)
         except KeyboardInterrupt:
-            motor.stop()
+            GPIO.cleanup()
 
 
 robotCar = Robot_Car()
