@@ -43,7 +43,7 @@ class RangingSensor():
             GPIO_TRIGGER = 16 # GPIO 4
             GPIO_ECHO = 18 # GPIO 5
         elif(type == 'After'):
-            GPIO_TRIGGER = 5 # SCL
+            GPIO_TRIGGER = 19 # MOSI
             GPIO_ECHO = 7 # GPIO7
         else:
             return 0

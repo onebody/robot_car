@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f86c2a1e-75cd-46fa-9953-676068d0dcf0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RPi_api/Raspi_I2C.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RPi_api/Raspi_PWM_Servo_Driver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RPi_api/Robot_web.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RPi_api/ServoAPI.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webiopi_api/Raspi_I2C.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webiopi_api/Raspi_PWM_Servo_Driver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webiopi_api/ServoAPI.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RPi_api/RangingSensor.py" afterPath="$PROJECT_DIR$/RPi_api/RangingSensor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RPi_api/RobotMotor.py" afterPath="$PROJECT_DIR$/RPi_api/RobotMotor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RPi_api/Robot_auto.py" afterPath="$PROJECT_DIR$/RPi_api/Robot_auto.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot.html" afterPath="$PROJECT_DIR$/robot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py" afterPath="$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py" />
     </list>
     <ignored path="robot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +34,73 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Robot_auto.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RobotMotor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RPi_api/RobotMotor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="36" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Robot_auto.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RPi_api/Robot_auto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.31040564">
+            <state line="42" column="0" selection-start="941" selection-end="1208" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#121#132#0" expanded="true" />
+                <element signature="e#121#144#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Servo_Example.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Servo_Example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="7" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#19#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Robot_web.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RPi_api/Robot_web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="5" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#48#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webiopi_macro_script.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="444" column="0" selection-start="13519" selection-end="13557" vertical-scroll-proportion="0.5247706">
+              <folding>
+                <element signature="e#103#117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RangingSensor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RPi_api/RangingSensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StepMotor.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RPi_api/StepMotor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="26" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,22 +122,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/12.html" />
-        <option value="$PROJECT_DIR$/webiopi_api/RobotMotor.py" />
         <option value="$PROJECT_DIR$/webcam.html" />
-        <option value="$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py" />
         <option value="$PROJECT_DIR$/robot_motor.html" />
-        <option value="$PROJECT_DIR$/robot.html" />
         <option value="$PROJECT_DIR$/robot.py" />
         <option value="$PROJECT_DIR$/webiopi_api/Robot_auto.py" />
         <option value="$PROJECT_DIR$/webiopi_api/RangingSensor.py" />
-        <option value="$PROJECT_DIR$/RPi_api/RobotMotor.py" />
         <option value="$PROJECT_DIR$/RPi_api/StepMotor.py" />
         <option value="$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Raspi_I2C.py" />
         <option value="$PROJECT_DIR$/webiopi_api/Robot.py" />
         <option value="$PROJECT_DIR$/RPi_api/RangingSensor.py" />
+        <option value="$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Servo_Example.py" />
+        <option value="$PROJECT_DIR$/robot.html" />
+        <option value="$PROJECT_DIR$/webiopi_api/ServoAPI.py" />
+        <option value="$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py" />
+        <option value="$PROJECT_DIR$/RPi_api/RobotMotor.py" />
         <option value="$PROJECT_DIR$/RPi_api/Robot_auto.py" />
+        <option value="$PROJECT_DIR$/RPi_api/Robot_web.py" />
       </list>
     </option>
   </component>
@@ -104,7 +173,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -125,6 +193,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,9 +220,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\python_workspace\robot_car" />
       <recent name="H:\python_workspace\robot_car\RPi_api" />
       <recent name="H:\python_workspace\robot_car\webiopi_api" />
+      <recent name="H:\python_workspace\robot_car" />
       <recent name="H:\python_workspace\robot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -272,7 +341,11 @@
       <created>1408206104755</created>
       <updated>1408206104756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="采用 RPi.GPIO实现自动行驶，测距等">
+      <created>1408466151155</created>
+      <updated>1408466151155</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -281,9 +354,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18368903" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18978658" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -292,7 +366,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -355,106 +428,124 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/other/robot_stepMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="508" selection-end="511" vertical-scroll-proportion="0.77954143" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webiopi_api/RangingSensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="24" selection-end="38" vertical-scroll-proportion="0.06238532" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/robot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="8" selection-start="6382" selection-end="6382" vertical-scroll-proportion="-0.026455026" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="9" selection-start="1357" selection-end="1358" vertical-scroll-proportion="0.3770795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_motor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="0" selection-start="4012" selection-end="4012" vertical-scroll-proportion="0.6913124" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="22" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.5097002" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/robot_sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="27" selection-start="273" selection-end="278" vertical-scroll-proportion="0.029982364" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RPi_api/StepMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="86" selection-end="95" vertical-scroll-proportion="-0.2892416">
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RPi_api/RobotMotor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="55" selection-end="78" vertical-scroll-proportion="0.119929455">
-          <folding>
-            <element signature="e#18#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Yeelink/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webiopi_api/Robot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="16" selection-start="851" selection-end="851" vertical-scroll-proportion="0.6895943">
-          <folding>
-            <element signature="e#103#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Yeelink/LED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="636" selection-end="656" vertical-scroll-proportion="0.7195767">
+        <state line="146" column="35" selection-start="4696" selection-end="4696" vertical-scroll-proportion="0.43438077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Yeelink/Yeelink.py">
+    <entry file="file://$PROJECT_DIR$/webiopi_api/config">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="585" selection-end="585" vertical-scroll-proportion="0.7495591">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi/devices/analog/pca9685.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="36" selection-start="734" selection-end="734" vertical-scroll-proportion="0.23985891">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi/devices/analog/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="40" selection-start="4606" selection-end="4616" vertical-scroll-proportion="0.06349207">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Raspi_I2C.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="0.23985891">
+        <state line="12" column="26" selection-start="376" selection-end="376" vertical-scroll-proportion="-2.306422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Raspi_PWM_Servo_Driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="783" selection-end="783" vertical-scroll-proportion="0.5614679">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPi_api/Raspi_PWM_Servo_Driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPi_api/ServoAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.35978836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPi_api/RobotMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="36" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RPi_api/RangingSensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.5802469">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPi_api/StepMotor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="26" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi-client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="-0.10934744">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geekroo-PiCobber-PWMServo/Servo_Example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#19#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RPi_api/Robot_auto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="16" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.31040564">
+        <state line="42" column="0" selection-start="941" selection-end="1208" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#121#132#0" expanded="true" />
+            <element signature="e#121#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPi_api/Robot_web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#48#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webiopi_api/webiopi_macro_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="444" column="0" selection-start="13519" selection-end="13557" vertical-scroll-proportion="0.5247706">
+          <folding>
+            <element signature="e#103#117#0" expanded="true" />
           </folding>
         </state>
       </provider>

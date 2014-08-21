@@ -15,8 +15,8 @@
             button = webiopi().createButton("bt_left", "<", turn_left, stop);
             $("#middle").append(button);
 
-            button = webiopi().createButton("bt_stop", "Auto", auto);
-            $("#middle").append(button);
+//            button = webiopi().createButton("bt_stop", "Auto", auto);
+//            $("#middle").append(button);
 
             button = webiopi().createButton("bt_right", ">", turn_right, stop);
             $("#middle").append(button);
@@ -30,7 +30,10 @@
             button = webiopi().createButton("bt_webCam_right", "右", webCam_right);
             $("#webCam").append(button);
 
-            //setInterval("showTime()", 1000);
+            button = webiopi().createButton("bt_mid", "正", turn_mid);
+            $("#middle").append(button);
+
+            setInterval("showTime()", 1000);
 
 
         }
@@ -78,6 +81,11 @@
         function turn_left() {
             init_robotMotor();
             webiopi().callMacro("robotMotor_control", "turn_left_forward");
+        }
+
+        function turn_mid() {
+            init_robotMotor();
+            webiopi().callMacro("robotMotor_control", "turn_mid");
         }
 
         function stop() {
@@ -136,7 +144,7 @@
 </head>
 <body>
 <div id="content" align="center">
-    <div id="tip">哈</div>
+    <div id="tip">-----------------</div>
 
     <!--<img width="320" height="240" src="http://192.168.1.102:8081/?action=stream"><br/>-->
 
