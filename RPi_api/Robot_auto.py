@@ -3,13 +3,16 @@
 # Need to change /etc/webiopi
 
 # Imports
+import thread
+
 import RPi.GPIO as GPIO
-import time
 from RobotMotor import RobotMotor
 from RangingSensor import RangingSensor
 from ServoAPI import *
 
+
 GPIO.setwarnings(False)
+
 
 class Robot_Car():
     distanceType_Before = 'Before'
@@ -117,3 +120,9 @@ class Robot_Car():
             self.start()
         elif (action == "auto_stop"):
             self.stop()
+
+        # GPIO.cleanup()
+        print(" close>>>>>")
+        # return
+        # thread.exit_thread()
+        # thread.exit()

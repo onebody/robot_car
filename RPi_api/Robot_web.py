@@ -11,19 +11,9 @@ urls = (
     '/robot_api', 'index'
 )
 
-print("Robot HTTP server is running....")
 robot_car = Robot_Car()
 
-
 class index:
-    distanceType_Before = 'Before'
-    distanceType_After = 'After'
-
-    isAuto = True
-
-    delays = 0.5  #
-    steps = 100  #
-
     def GET(self):
         i = web.input()
         action = i.action
@@ -32,5 +22,6 @@ class index:
 
 
 if __name__ == "__main__":
+    print("Robot HTTP server is running....")
     app = web.application(urls, globals())
     app.run()
