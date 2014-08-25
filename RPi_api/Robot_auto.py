@@ -124,5 +124,5 @@ class Robot_Car():
         # GPIO.cleanup()
         print(" close>>>>>")
         # return
-        # thread.exit_thread()
+        thread.exit_thread()
         # thread.exit()

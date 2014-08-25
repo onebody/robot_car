@@ -2,7 +2,6 @@
 
 from socket import *
 # from time import ctime
-# import thread
 
 from Robot_auto import *
 
@@ -26,20 +25,22 @@ class RobotServer():
         self.tcpSerSock.bind((host, port))
         self.tcpSerSock.listen(client_count)
 
-    def to(self, tcpCliSock):
+    def goto(self, tcpCliSock):
         data = tcpCliSock.recv(self.BUFSIZE)
+        data = data.replace("\r", '').replace("\n", '')
+        print ('1.Received from client:', data)
+
         if not data:
             return
         elif data == "bye":
-            tcpCliSock.send('bye')
+            tcpCliSock.send(data)
             return
         else:
-            data = data.replace("\r", '').replace("\n", '')
-            print ('1 Received from client:', data)
-            # thread.start_new_thread(process, (data,))
-            robot_car.manual(data)
-            print ('1 send to client:', data)
-            #tcpCliSock.send('[%s] %s' % (ctime(), data))
+            print (" Robot Server call RPi...")
+            thread.start_new_thread(process, (data,))
+            # robot_car.manual(data)
+            # print ('1 send to client:', data)
+            # tcpCliSock.send('[%s] %s' % (ctime(), data))
 
     def start(self):
         while True:
@@ -49,12 +50,13 @@ class RobotServer():
 
             while True:
                 try:
-                    self.to(tcpCliSock)
+                    self.goto(tcpCliSock)
                     break
                 except IOError, error:
-                    print(" exit>>>")
-                    print(error)
-                    print(" exit<<<<<")
+                    # print(" exit>>>")
+                    # print(error)
+                    # print(" exit<<<<<")
+                    print (" Robot Server call RPi...end")
                     break
 
             tcpCliSock.close()
