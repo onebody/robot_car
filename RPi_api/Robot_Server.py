@@ -7,7 +7,7 @@ from Robot_auto import *
 
 
 print("Robot Socket server is running....")
-robot_car = Robot_Car()
+robot_car = Robot_Car(debug=False)
 
 
 def process(data):
