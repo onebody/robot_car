@@ -38,8 +38,8 @@ class RobotMotor():
         GPIO.output(self.OUT2, False)
 
     def stop(self):
-    #        GPIO.output(self.OUT1, FaEN1e)
-    #        GPIO.output(self.OUT2, FaEN1e)
+        GPIO.output(self.OUT1, False)
+        GPIO.output(self.OUT2, False)
         GPIO.output(self.OUT3, False)
         GPIO.output(self.OUT4, False)
 
@@ -63,8 +63,8 @@ class RobotMotor():
 
         GPIO.setmode(GPIO.BOARD)
         #    GPIO.setFunction(self.EN1, GPIO.PWM)
-        #        GPIO.setup(self.OUT1, GPIO.OUT)
-        #        GPIO.setup(self.OUT2, GPIO.OUT)
+        GPIO.setup(self.OUT1, GPIO.OUT)
+        GPIO.setup(self.OUT2, GPIO.OUT)
 
         #    GPIO.setFunction(self.EN2, GPIO.PWM)
         GPIO.setup(self.OUT3, GPIO.OUT)
